@@ -33,7 +33,7 @@
     ],
     "template": [
       "default",
-      "templates/discordfx"
+      "templates/darkfx"
     ],    
     "resource": [
       {

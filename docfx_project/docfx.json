@@ -30,10 +30,6 @@
           "*.md"
         ]
       }
-    ],
-    "template": [
-      "default",
-      "templates/darkfx"
     ],    
     "resource": [
       {
@@ -57,7 +53,8 @@
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
     "template": [
-      "default"
+      "default",
+      "templates/darkfx"
     ],
     "postProcessors": [],
     "markdownEngineName": "markdig",

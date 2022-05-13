@@ -31,7 +31,7 @@ jobs:
 
       - name: Build Site
         working-directory: docfx_project
-        run: docfx .\docfx.json build -t default,./templates/darkfx
+        run: docfx .\docfx.json
         continue-on-error: false
 
       - name: Deploy
@@ -45,11 +45,3 @@ jobs:
           user_email: 'kinsondigital@gmail.com'
           personal_token: ${{ secrets.REPO_ACCESS }}
           
-      # - name: Deploy Documentation
-      #   uses: JamesIves/github-pages-deploy-action@v4.3.3
-      #   with:
-      #     repository-name: KinsonDigital/DocFXSampleDocumentation
-      #     branch: master # The branch the action should deploy to.
-      #     folder: ./docfx_project/DocSite # The folder the action should deploy.
-      #     target-folder: _site
-      #     token: ${{ secrets.REPO_ACCESS }}

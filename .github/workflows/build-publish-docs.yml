@@ -33,11 +33,20 @@ jobs:
         run: docfx docfx.json
         continue-on-error: false
 
-      - name: Deploy Documentation
-        uses: JamesIves/github-pages-deploy-action@v4.3.3
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          repository-name: KinsonDigital/DocFXSampleDocumentation
-          branch: master # The branch the action should deploy to.
-          folder: ./docfx_project/DocSite # The folder the action should deploy.
-          target-folder: _site
-          token: ${{ secrets.REPO_ACCESS }}
+          external_repository: KinsonDigital/DocFXSampleDocumentation
+          publish_branch: master
+          publish_dir: ./docfx_project/DocSite
+          destination_dir: _site
+          personal_token: ${{ secrets.REPO_ACCESS }}
+          
+      # - name: Deploy Documentation
+      #   uses: JamesIves/github-pages-deploy-action@v4.3.3
+      #   with:
+      #     repository-name: KinsonDigital/DocFXSampleDocumentation
+      #     branch: master # The branch the action should deploy to.
+      #     folder: ./docfx_project/DocSite # The folder the action should deploy.
+      #     target-folder: _site
+      #     token: ${{ secrets.REPO_ACCESS }}

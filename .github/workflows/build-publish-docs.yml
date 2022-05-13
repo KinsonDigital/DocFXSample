@@ -29,8 +29,8 @@ jobs:
         run: dotnet restore
 
       - name: Build Site
-        working-directory: docs
-        run: docfx .\docfx_project\docfx.json
+        working-directory: docfx_project
+        run: docfx docfx.json
         continue-on-error: false
 
 #      - name: Deploy Documentation

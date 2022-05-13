@@ -39,4 +39,5 @@ jobs:
           repository-name: KinsonDigital/DocFXSampleDocumentation
           branch: master # The branch the action should deploy to.
           folder: ./docfx_project/DocSite # The folder the action should deploy.
+          target-folder: _site
           token: ${{ secrets.REPO_ACCESS }}

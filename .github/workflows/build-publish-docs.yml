@@ -1,6 +1,7 @@
 name: 📄Build and Publish Documentation
 
 on:
+  workflow_dispatch:
   push:
     branches: [ master ]
   pull_request:
@@ -40,7 +41,7 @@ jobs:
           publish_branch: master
           publish_dir: ./docfx_project/DocSite
           destination_dir: _site
-          personal_token: ${{ secrets.REPO_PASSWORD }}
+          personal_token: ${{ secrets.REPO_ACCESS }}
           
       # - name: Deploy Documentation
       #   uses: JamesIves/github-pages-deploy-action@v4.3.3

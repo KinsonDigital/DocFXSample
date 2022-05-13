@@ -31,7 +31,7 @@ jobs:
 
       - name: Build Site
         working-directory: docfx_project
-        run: docfx docfx.json -t default,./templates/discordfx
+        run: docfx .\docfx.json build -t default,./templates/darkfx
         continue-on-error: false
 
       - name: Deploy
@@ -39,7 +39,7 @@ jobs:
         with:
           external_repository: KinsonDigital/DocFXSampleDocumentation
           publish_branch: master
-          publish_dir: ./docfx_project/DocSite
+          publish_dir: ./docfx_project/_site
           destination_dir: docs
           user_name: 'Calvin Wilkinson[DocFXSample Workflow]'
           user_email: 'kinsondigital@gmail.com'
